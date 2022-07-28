@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import CharacterItem from "./CharacterItem";
+import { Link } from "react-router-dom";
 
 const Pokedext = () => {
   const user = useSelector((state) => state.user);
@@ -32,7 +33,7 @@ const Pokedext = () => {
   };
 
   const typePokemon = (e) => {
-    alert("se seleciono un tipo " + e.target.value);
+    // alert("se seleciono un tipo " + e.target.value);
 
       
     axios
@@ -60,10 +61,13 @@ const Pokedext = () => {
     <div className="pokedext">
       <div className="title-pokedext">
         <img src="https://i.ibb.co/kDxBmXL/2c6d4724d09eae771dfae334e0a2f9c3.png" alt="" /> 
-
-        {/* <h1>PoKéDeX</h1> */}
+        <Link to={"/"} className="fa-solid fa-arrow-left-long  arrow"> <span>  &nbsp; &nbsp;  previous</span></Link>
+      
       </div>
       <div className="welcome">
+       
+      
+
         <p>Welcom {user}, where you can find your favorite Pokemon </p>
 
         <form className="form-seach-pokedex" onSubmit={search}>
@@ -84,23 +88,7 @@ const Pokedext = () => {
           ))}
         </select>
       </div>
-      {/* <div>
-        <button onClick={() => setPage(page - 1)} disabled={page === 1}>
-          Prev page
-        </button>
-        {numbers.map((number) => (
-          <button onClick={() => setPage(number)}>{number}</button>
-        ))}
-        <button onClick={() => setPage(page + 1)} disabled={page === lastPage}>
-          Next Page
-        </button>
-        <ul>
-          {pokemonsPaginated?.map((pokemon) => (
-            <CharacterItem pokemon={pokemon} key={pokemon.pokemon.url} />
-          ))}
-        </ul>
-      </div> */}
-
+  
       <div className="container-card">
         {pokemonsPaginated.map((character) => (
           <CharacterItem
@@ -110,11 +98,18 @@ const Pokedext = () => {
         ))}
       </div>
       <div className="pagination-buttons">
+
+      <button className="button-pagination" onClick={() => setPage(page - 1)} disabled={page === 1}>
+          Prev page
+        </button>
       {
         numbers.map(number =>(
          <button className="buttons-pg" onClick={() => setPage(number)} key={number}>{number}</button>
         ))
       }
+       <button className="button-pagination" onClick={() => setPage(page + 1)} disabled={page === lastPage}>
+          Next Page
+        </button>
 
       </div>
    

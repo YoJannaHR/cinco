@@ -133,6 +133,10 @@
   grid-template-columns: 20% auto auto 20%;
   grid-template-rows: auto auto auto auto;
 }
+.arrow{
+ text-decoration: none;
+  color: #2561af;
+}
 
 .button-search{
   border: 3px solid #f5ce5b;
@@ -143,6 +147,7 @@
   color: #fff;
  
 }
+
 .form-seach-pokedex{
   display: flex;
   gap: 10px;
@@ -154,6 +159,10 @@
   grid-column: 1/4;
   font-weight: 900;
    margin-left: 20px;
+   display: flex;
+ justify-content: space-around;
+  margin-top: 30px;
+  font-size: .5rem;
  
 }
 .welcome {
@@ -234,8 +243,20 @@
   border: 3px solid #f5ce5b;
   background-color: #2561af;
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  color: #fff;
+
+}
+
+.button-pagination{
+
+  border: 3px solid #f5ce5b;
+  background-color: #2561af;
+ border-radius: 1rem; 
+   width: 75px;
+  height: 25px; 
   color: #fff;
 
 }
@@ -250,8 +271,10 @@
 
 }
 .title-pokemonItem{
-
+ display: flex;
+ justify-content: space-around;
   margin-top: 30px;
+  font-size: .5rem;
 }
 .pokemon {
   display: grid;
