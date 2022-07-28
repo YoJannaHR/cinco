@@ -66,15 +66,16 @@ const Pokedext = () => {
       <div className="welcome">
         <p>Welcom {user}, where you can find your favorite Pokemon </p>
 
-        <form onSubmit={search}>
+        <form className="form-seach-pokedex" onSubmit={search}>
           <input
+            className="input-user"
             value={characterSearch}
             onChange={(e) => setcharacterSearch(e.target.value)}
             type="text"
           />
-          <button>Search</button>
+          <button className="button-search">Search</button>
         </form>
-        <select onChange={typePokemon}>
+        <select className="select-pokedex" onChange={typePokemon}>
           {/* <option>Select Type</option> */}
           {typesPokemon?.map((typePokemon) => (
             <option value={typePokemon.url} key={typePokemon.url}>
@@ -111,7 +112,7 @@ const Pokedext = () => {
       <div className="pagination-buttons">
       {
         numbers.map(number =>(
-         <button onClick={() => setPage(number)} key={number}>{number}</button>
+         <button className="buttons-pg" onClick={() => setPage(number)} key={number}>{number}</button>
         ))
       }
 

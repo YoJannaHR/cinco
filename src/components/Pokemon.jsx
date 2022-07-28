@@ -18,7 +18,10 @@ const Pokemon = () => {
 
   return (
     <div className="container-pokemon">
-          <h1>Pokemon</h1>
+      <div className="title-pokemonItem">
+      <img src="https://i.ibb.co/MfR394S/165f659fbdab9f3c143d50c1f172310c.png"  />
+      </div>
+       
     <div className="pokemon-container">
       
       <div className="pokemon">
