@@ -53,13 +53,13 @@ const Pokemon = () => {
         </div>
         <div className="moves">
           <h2 className="title-moves">Movimientos</h2>
-          <div className="moves-list">
+          <ol className="moves-list">
             {moves?.map((move) => (
-              <div key={move.move.name}>
-                <h3>{move.move.name}</h3>
-              </div>
+              <li key={move.move.name}>
+                <h3>  &nbsp; &nbsp; {move.move.name}</h3>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </div>
     </div>
